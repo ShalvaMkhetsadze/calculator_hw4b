@@ -12,62 +12,221 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:stretchColumns="0"
+        android:orientation="vertical">
 
 
-        <TableRow
+        <TableRow android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline4"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:orientation="vertical" />
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/resultView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="30sp"
                 android:text="Calculator" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline5"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:orientation="horizontal" />
-
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
             <EditText
                 android:id="@+id/resultEdit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Name" />
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:gravity="end"
+                android:layout_gravity="center"
+                android:text="0" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline3"
-                android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" />
-
+                android:gravity="center">
             <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
+                android:id="@+id/button7"
+                android:layout_width="@dimen/btnW"
+                android:layout_height="@dimen/btnW"
+                android:layout_marginEnd="@dimen/btnPadding"
+                android:textSize="@dimen/btnTextSize"
+                android:text="7" />
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="@dimen/btnW"
+                    android:layout_height="@dimen/btnW"
+                    android:padding="@dimen/btnPadding"
+                    android:layout_marginEnd="@dimen/btnPadding"
+                    android:textSize="@dimen/btnTextSize"
+                    android:text="8" />
+                <Button
+                    android:id="@+id/button9"
+                    android:layout_width="@dimen/btnW"
+                    android:layout_height="@dimen/btnW"
+                    android:padding="@dimen/btnPadding"
+                    android:layout_marginEnd="@dimen/btnPadding"
+                    android:textSize="@dimen/btnTextSize"
+                    android:text="9" />
+                <Button
+                    android:id="@+id/buttonClear"
+                    android:layout_width="@dimen/btnW"
+                    android:layout_height="@dimen/btnW"
+                    android:padding="@dimen/btnPadding"
+                    android:layout_marginEnd="@dimen/btnPadding"
+                    android:textSize="@dimen/btnTextSize"
+                    android:text="C" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="1" />
+                android:gravity="center">
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="@dimen/btnW"
+                    android:layout_height="@dimen/btnW"
+                    android:layout_marginEnd="@dimen/btnPadding"
+                    android:textSize="@dimen/btnTextSize"
+                    android:text="4" />
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="@dimen/btnW"
+                    android:layout_height="@dimen/btnW"
+                    android:padding="@dimen/btnPadding"
+                    android:layout_marginEnd="@dimen/btnPadding"
+                    android:textSize="@dimen/btnTextSize"
+                    android:text="5" />
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="@dimen/btnW"
+                    android:layout_height="@dimen/btnW"
+                    android:padding="@dimen/btnPadding"
+                    android:layout_marginEnd="@dimen/btnPadding"
+                    android:textSize="@dimen/btnTextSize"
+                    android:text="6" />
+                <Button
+                    android:id="@+id/buttonDiv"
+                    android:layout_width="@dimen/btnW"
+                    android:layout_height="@dimen/btnW"
+                    android:padding="@dimen/btnPadding"
+                    android:layout_marginEnd="@dimen/btnPadding"
+                    android:textSize="@dimen/btnTextSize"
+                    android:text="/" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </TableRow>
+        <TableRow>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="@dimen/btnW"
+                    android:layout_height="@dimen/btnW"
+                    android:layout_marginEnd="@dimen/btnPadding"
+                    android:textSize="@dimen/btnTextSize"
+                    android:text="1" />
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="@dimen/btnW"
+                    android:layout_height="@dimen/btnW"
+                    android:padding="@dimen/btnPadding"
+                    android:layout_marginEnd="@dimen/btnPadding"
+                    android:textSize="@dimen/btnTextSize"
+                    android:text="2" />
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="@dimen/btnW"
+                    android:layout_height="@dimen/btnW"
+                    android:padding="@dimen/btnPadding"
+                    android:layout_marginEnd="@dimen/btnPadding"
+                    android:textSize="@dimen/btnTextSize"
+                    android:text="3" />
+                <Button
+                    android:id="@+id/buttonMul"
+                    android:layout_width="@dimen/btnW"
+                    android:layout_height="@dimen/btnW"
+                    android:padding="@dimen/btnPadding"
+                    android:layout_marginEnd="@dimen/btnPadding"
+                    android:textSize="@dimen/btnTextSize"
+                    android:text="*" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </TableRow>
+        <TableRow>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <Button
+                    android:id="@+id/button0"
+                    android:layout_width="@dimen/btnW"
+                    android:layout_height="@dimen/btnW"
+                    android:layout_marginEnd="@dimen/btnPadding"
+                    android:textSize="@dimen/btnTextSize"
+                    android:text="0" />
+                <Button
+                    android:id="@+id/buttonPoint"
+                    android:layout_width="@dimen/btnW"
+                    android:layout_height="@dimen/btnW"
+                    android:padding="@dimen/btnPadding"
+                    android:layout_marginEnd="@dimen/btnPadding"
+                    android:textSize="@dimen/btnTextSize"
+                    android:text="." />
+                <Button
+                    android:id="@+id/buttonPlus"
+                    android:layout_width="@dimen/btnW"
+                    android:layout_height="@dimen/btnW"
+                    android:padding="@dimen/btnPadding"
+                    android:layout_marginEnd="@dimen/btnPadding"
+                    android:textSize="@dimen/btnTextSize"
+                    android:text="+" />
+                <Button
+                    android:id="@+id/buttonMinus"
+                    android:layout_width="@dimen/btnW"
+                    android:layout_height="@dimen/btnW"
+                    android:padding="@dimen/btnPadding"
+                    android:layout_marginEnd="@dimen/btnPadding"
+                    android:textSize="@dimen/btnTextSize"
+                    android:text="-" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </TableRow>
+        <TableRow>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/btnTextSize"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginEnd="55dp"
+                    android:text="="/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
         </TableRow>
 
     </TableLayout>
